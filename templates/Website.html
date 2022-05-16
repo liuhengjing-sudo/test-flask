@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	
+	</head>
+	
+	<body style="background-color:rgb(232, 232, 232);">
+		<div class="DivHeadingStyle"> 
+			<span>TRC4200</span> 
+		</div>
+		
+		<div class="DivBodyStyle">
+			<img src="./static/plot.png">
+			
+			<p></p>
+			<p>Text received {{form_data}}</p>
+
+		
+
+			<form action="/" method="POST">
+				Company
+				<select name="company" style="font-size: 20px;" method>
+					{% for name in company_list %}
+						<option value="{{name}}">{{name}}</option>
+					{% endfor %}
+				</select>
+
+				<!-- <p>Location Coordinates <input name="coord"></p> -->
+				<!--<p>Start Date<input name="startdate"></p>
+				<p>End Date<input name="enddate"></p>-->
+				<p><input type="submit"></p>
+			</form>
+			
+
+			
+		</div>
+	</body>
+</html>
+
+
